@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: #edd183;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  color: rgb(176, 196, 175);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover cursor {
+  cursor: pointer;
+}
+
+.header {
+  background-color: #2B3635;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.chrome-picker {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+
+.header-links {
+  align-self: flex-end;
+  padding-right: 20px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #323563;
+}
+
+body {
+  background-color: #012525;
+}
+
+#logo {
+  width: 18%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-self: auto;
+}
+
+.random-button {
+	background-color:#edd183;
+	border-radius:13px;
+	border:2px solid #3f848f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3f848f;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.random-button:hover {
+	background-color:#323563;
+}
+
+.random-button:active {
+	position:relative;
+	top:1px;
+}
+
+p {
   color: white;
+  text-shadow: 1px 1px black;
 }
 
-.App-link {
-  color: #61dafb;
+.colorCard {
+  border: 1px solid white;
+  width: 250px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 350px;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.colors-set {
+  padding-inline-start: 0;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-flow: row nowrap;
+  justify-content: center;
+  text-align: center;
+  list-style-type: none;
+  background-color: #012525;
+}
+
+.divider {
+  overflow: hidden;
+  background-color: #323563;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  padding-top: 15px;
 }
