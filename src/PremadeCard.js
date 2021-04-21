@@ -2,33 +2,29 @@ import React from "react";
 
 export default function PremadeCard({palette}){
 
-    // function hexToRgb(hex) {
-    //     var bigint = parseInt(hex, 16);
-    //     var r = (bigint >> 16) & 255;
-    //     var g = (bigint >> 8) & 255;
-    //     var b = bigint & 255;
-    
-    //     return r + "," + g + "," + b;
-    // }
-    
-    // const convert = () => {
-    //     console.log(hexToRgb(palette))
-    //     return (hexToRgb(palette));
-    // }
+    const RGBToHex = (r, g, b) => {
+        r = r.toString(16);
+        g = g.toString(16);
+        b = b.toString(16);
 
-    const rgbToHex = (r, g, b) => {
-        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        if (r.length === 1)
+            r = "0" + r;
+        if (g.length === 1)
+            g = "0" + g;
+        if (b.length === 1)
+            b = "0" + b;
+        return "#" + r + g + b;
     }
 
     const convert = () => {
-        return rgbToHex(palette);
+        let hexString = RGBToHex(palette[0],palette[1],palette[2])
+        return hexString.toUpperCase()
     }
-
 
     return(
         <div className="colorCard" style={{backgroundColor: `rgba(${palette[0]}, ${palette[1]}, ${palette[2]})` }} key={palette}>
             <p>RGB: {palette[0]}, {palette[1]}, {palette[2]} </p>
-            <p>Hex: #{convert()} </p>
+            <p>Hex: {convert()} </p>
         </div>
     )
 

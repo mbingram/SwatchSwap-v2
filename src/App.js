@@ -45,12 +45,12 @@ export default function App() {
       <div className="App">
         <Header />
         <NavBar
-          loadColors={loadColors}/>
+          loadColors={loadColors}
+          colors={colors}/>
         <ColorsDiv
           colors={colors} />
         <Divider />
         <PremadeDiv premadePalettes={premadePalettes} />
-
       </div>
     );
 

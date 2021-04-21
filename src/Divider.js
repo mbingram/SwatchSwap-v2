@@ -4,7 +4,8 @@ export default function Divider() {
 
     return(
         <div className="divider">
-            <p>✨ Check Out Some of Our Premade Palletes! ✨</p>
+            <h3>Looking for inspiration?</h3>
+            <p>✨ Check Out Some of Our Premade Palettes! ✨</p>
         </div>
     )
 }

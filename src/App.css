@@ -119,8 +119,10 @@ p {
   display: flex;
   justify-content: space-evenly;
   color: white;
-  padding-top: 15px;
+  padding-top: 7px;
+  border: 2px solid black;
 }
+
 
 
 
