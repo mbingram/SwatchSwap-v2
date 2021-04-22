@@ -4,7 +4,12 @@ import ColorsDiv from './ColorsDiv'
 import Header from './Header'
 import NavBar from './NavBar'
 import PremadeDiv from './PremadeDiv'
-import Divider from './Divider'
+import Premade2 from './Premade2'
+import Premade3 from './Premade3'
+import Premade4 from './Premade4'
+import Divider1 from './Divider1'
+import Divider2 from './Divider2'
+import Divider3 from './Divider3'
 
 const baseURL = "http://colormind.io/api/"
 const paletteSeeds = "http://localhost:6001/palettes"
@@ -12,7 +17,10 @@ const paletteSeeds = "http://localhost:6001/palettes"
 export default function App() {
 
   const [colors, setColors] = useState([])
-  const [premadePalettes, setPalettes] = useState([])
+  const [premadeOne, setPaletteOne] = useState([])
+  const [premadeTwo, setPaletteTwo] = useState([])
+  const [premadeThree, setPaletteThree] = useState([])
+  const [premadeFour, setPaletteFour] = useState([])
 
   const loadColors = () => {
     fetch(baseURL, {
@@ -23,7 +31,6 @@ export default function App() {
     })
       .then(response => response.json())
       .then(colors => {
-        console.log(colors.result)
         setColors(colors.result)
         })
   };
@@ -32,8 +39,10 @@ export default function App() {
     fetch(paletteSeeds)
       .then(response => response.json())
       .then(palettes => {
-        console.log(palettes)
-        setPalettes(palettes)
+        setPaletteOne(palettes.one)
+        setPaletteTwo(palettes.two)
+        setPaletteThree(palettes.three)
+        setPaletteFour(palettes.four)
       })}
 
   useEffect ( () => {
@@ -49,8 +58,18 @@ export default function App() {
           colors={colors}/>
         <ColorsDiv
           colors={colors} />
-        <Divider />
-        <PremadeDiv premadePalettes={premadePalettes} />
+        <Divider1 />
+        <Divider2 />
+        <Divider3 />
+        <PremadeDiv
+          premadePalettes={premadeOne} />
+        <Premade2 
+          premadeTwo={premadeTwo} />
+        <Premade3
+          premadeThree={premadeThree} />
+        <Premade4
+          premadeFour={premadeFour} />
+
       </div>
     );
 

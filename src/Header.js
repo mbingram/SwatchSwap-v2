@@ -16,7 +16,7 @@ export default function Header() {
                     color={ background }
                     onChangeComplete={ handleChangeComplete } />
                 <img src={logo} alt="logo" id="logo" className="logo"></img>
-                <p className="header-links"><a href="http://colormind.io/image/">Get a Pallete From an Image</a> | <a href="http://colormind.io/api-access/">Hit the API</a></p>
+                <h5 className="header-links"><a href="http://colormind.io/image/">Get a Pallete From an Image</a> | <a href="http://colormind.io/api-access/">Hit the API</a></h5>
             </div>
         )
 }

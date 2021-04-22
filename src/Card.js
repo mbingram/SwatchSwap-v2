@@ -24,7 +24,7 @@ export default function Card({color}){
     return(
         <div className="colorCard" style={{backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`}}>
             <p className="card" > RGB: {color[0]}, {color[1]}, {color[2]} </p>
-            <button className="lock">Lock</button>
+            {/* <button className="lock">Lock</button> */}
             <p id="hex" >Hex: {convert()}</p>
         </div>
     )
