@@ -30,13 +30,13 @@ a:active {
 a:hover cursor {
 	cursor: pointer;
 }
-
+/* 
 .header {
 	background-image: linear-gradient(to right, #C8F69B, #FFEEA5, #FFCBA5, #FFB1AF, #D6D4FF, #B3EEFF);
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-}
+} */
 
 .chrome-picker {
 	margin-left: 40px;
