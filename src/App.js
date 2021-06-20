@@ -11,7 +11,7 @@ import Divider1 from './Divider1'
 import Divider2 from './Divider2'
 import Divider3 from './Divider3'
 
-const baseURL = "https://colormind.io/api/"
+const baseURL = "http://colormind.io/api/"
 const paletteSeeds = "http://localhost:6001/palettes"
 
 export default function App() {
