@@ -81,7 +81,7 @@ export default function App() {
   useEffect ( () => {
     loadColors()
     loadPalettes()
-  }, [] )
+  } )
 
     return (
       <div className="App">
