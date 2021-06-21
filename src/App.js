@@ -74,22 +74,7 @@ export default function App() {
       })}
 
   useEffect ( () => {
-    setIsLoading(true)
-    timeoutHandler(10000, fetch(baseURL, {
-      method: 'POST',
-      body: JSON.stringify({
-        model: 'default',
-      })
-    }))
-      .then(response => response.json())
-      .then(colors => {
-        setIsLoading(false)
-        setColors(colors.result)
-      })
-      .catch(error => {
-        setErrorMessage("API Offline")
-        setIsLoading(false)
-      })
+    loadColors()
     loadPalettes()
   }, [] )
 
