@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 import ColorsDiv from './ColorsDiv'
 import Header from './Header'
@@ -43,7 +43,7 @@ export default function App() {
     })
   }
 
-  const loadColors = useCallback(() => {
+  const loadColors = () => {
     setIsLoading(true)
     timeoutHandler(10000, fetch(baseURL, {
       method: 'POST',
@@ -60,7 +60,7 @@ export default function App() {
         setErrorMessage("API Offline")
         setIsLoading(false)
       })
-  });
+  };
 
 
   const loadPalettes = () => {
@@ -76,7 +76,7 @@ export default function App() {
   useEffect ( () => {
     loadColors()
     loadPalettes()
-  }, [loadColors])
+  }, [] )
 
     return (
       <div className="App">
