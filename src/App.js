@@ -13,7 +13,7 @@ import Divider3 from './Divider3'
 import Loading from './Loading'
 import Error from './Error'
 
-const baseURL = "http://colormind.io/api/"
+const baseURL = "https://colormind.io/api/"
 const paletteSeeds = "https://swatch-swap-default-rtdb.firebaseio.com/palettes.json"
 
 export default function App() {
