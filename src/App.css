@@ -35,7 +35,7 @@ a:hover cursor {
 	background-image: linear-gradient(to right, #C8F69B, #FFEEA5, #FFCBA5, #FFB1AF, #D6D4FF, #B3EEFF);
 	display: flex;
 	flex-flow: row nowrap;
-	align-items: center;
+	/* justify-content: flex-end; */
 }
 
 .chrome-picker {
@@ -43,6 +43,13 @@ a:hover cursor {
 	margin-bottom: 20px;
 	/* align-self: flex-end; */
 	box-shadow: 2px 2px;
+}
+
+#logo {
+	width: 20%;
+	display: block;
+	margin: 20px auto 20px auto;
+	align-self: center;
 }
 
 .header-links {
@@ -53,7 +60,6 @@ a:hover cursor {
 .topnav {
 	overflow: hidden;
 	background-color: #C8F69B;
-	/* background-image: linear-gradient(to right, #323563, #ffffff, #323563); */
 	border: 0 0 0 2px solid;
 }
 
@@ -78,16 +84,6 @@ a:hover cursor {
 
 body {
 	background-color: #111313;
-}
-
-#logo {
-	width: 18%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	align-self: auto;
 }
 
 .random-button {
@@ -154,8 +150,6 @@ p {
 	color: white;
 	padding-top: 7px;
 }
-
-
 
 .wrap {
 	margin: 0 auto; max-width:960px; height:100%; padding:50px 0px;
