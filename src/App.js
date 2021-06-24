@@ -13,7 +13,7 @@ import Divider3 from './Divider3'
 import Loading from './Loading'
 import Error from './Error'
 
-const api = "http://colormind.io/api/"
+const api = "https://swatchswap.netlify.app/api"
 const paletteSeeds = "https://swatch-swap-default-rtdb.firebaseio.com/palettes.json"
 
 export default function App() {
