@@ -13,7 +13,7 @@ import Divider3 from './Divider3'
 import Loading from './Loading'
 import Error from './Error'
 
-const baseURL = "http://colormind.io/api/"
+const api = "http://colormind.io/api/"
 const paletteSeeds = "https://swatch-swap-default-rtdb.firebaseio.com/palettes.json"
 
 export default function App() {
@@ -45,7 +45,7 @@ export default function App() {
 
   const loadColors = useCallback(() => {
     setIsLoading(true)
-    timeoutHandler(10000, fetch(baseURL, {
+    timeoutHandler(10000, fetch(api, {
       method: 'POST',
       body: JSON.stringify({
         model: 'default',
